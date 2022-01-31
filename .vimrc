@@ -17,6 +17,7 @@ set nocompatible
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
+"
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
@@ -27,7 +28,6 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
-Plugin 'flazz/vim-colorschemes'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'posva/vim-vue'
@@ -221,7 +221,7 @@ map Y y$
 nnoremap <C-L> :nohl<CR><C-L>
 
 " Make copy/paste between vim instances
-set clipboard=unnamed
+set clipboard=unnamedplus
  
 au BufNewFile,BufRead *.s,*.S set filetype=arm " arm = armv6/7
 
