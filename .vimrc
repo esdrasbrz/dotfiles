@@ -221,7 +221,7 @@ map Y y$
 nnoremap <C-L> :nohl<CR><C-L>
 
 " Make copy/paste between vim instances
-set clipboard=unnamedplus
+set clipboard=unnamed
  
 au BufNewFile,BufRead *.s,*.S set filetype=arm " arm = armv6/7
 
