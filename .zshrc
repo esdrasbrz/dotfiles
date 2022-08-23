@@ -125,16 +125,14 @@ alias tf=terraform
 
 alias y=yarn
 
-alias ga="git add -A"
-alias gs="git status"
-alias gp="git push"
-alias gpf="git push -f"
-alias gc="git commit"
-alias gca="git commit --amend"
+alias flushdns="sudo killall -HUP mDNSResponder"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
 
+export USE_GKE_GCLOUD_AUTH_PLUGIN=True
+
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+export PATH=$PATH:$HOME/.krew/bin
