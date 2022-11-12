@@ -123,8 +123,6 @@ alias k=kubectl
 alias kctx=kubectx
 alias kns=kubens
 
-alias docker=podman
-
 alias tf=terraform
 
 alias y=yarn
