@@ -128,6 +128,7 @@ alias tf=terraform
 alias y=yarn
 
 alias flushdns="sudo killall -HUP mDNSResponder"
+alias argocdpwd="kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath=\"{.data.password}\" | base64 -d"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export VOLTA_HOME="$HOME/.volta"
@@ -138,3 +139,4 @@ export USE_GKE_GCLOUD_AUTH_PLUGIN=True
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 export PATH=$PATH:$HOME/.krew/bin
+export PATH=$PATH:$HOME/nvim/bin
