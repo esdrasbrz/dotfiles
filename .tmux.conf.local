@@ -241,7 +241,7 @@ tmux_conf_copy_to_os_clipboard=true
 # this is the place to override or undo settings
 
 # increase history size
-#set -g history-limit 10000
+set -g history-limit 50000
 
 # force Vi mode
 #   really you should export VISUAL or EDITOR environment variable, see manual
