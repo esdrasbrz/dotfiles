@@ -108,7 +108,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-source /opt/homebrew/opt/powerlevel10k/powerlevel10k.zsh-theme
+source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -130,6 +130,8 @@ alias y=yarn
 alias flushdns="sudo killall -HUP mDNSResponder"
 alias argocdpwd="kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath=\"{.data.password}\" | base64 -d"
 
+alias kgc=gcloud container clusters list 2>/dev/null | tail -n+2 | awk -F' ' '{system("gcloud container clusters get-credentials "$1" --region="$2)}'
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
@@ -140,3 +142,17 @@ export GOPATH=$HOME/go
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 export PATH=$PATH:$HOME/.krew/bin
 export PATH=$PATH:$HOME/nvim/bin
+
+# OpenClaw Completion
+source "/Users/esdras/.openclaw/completions/openclaw.zsh"
+
+# Added by Antigravity
+export PATH="/Users/esdras/.antigravity/antigravity/bin:$PATH"
+
+# Added by Antigravity IDE
+export PATH="/Users/esdras/.antigravity-ide/antigravity-ide/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+
+
+# Added by Antigravity CLI installer
+export PATH="/Users/esdras/.local/bin:$PATH"
